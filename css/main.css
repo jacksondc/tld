@@ -1,0 +1,482 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    border-top:8px solid #9b59b6;
+    margin: 0 0 6px; /* bottom = footer height */
+    color:#444;
+}
+
+h1 {
+  margin:1rem 0;
+  display:inline-block;
+  line-height:36px; /*to align with input box: 2px border,
+                                               18px text,
+                                               16px padding*/
+}
+
+#bottom-border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height:8px;
+  width:100%;
+  background-color: #9b59b6;
+}
+
+#main {
+  max-width:800px;
+  margin:2rem auto;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  margin:0 auto;
+  float:none;
+  text-align:center;
+}
+
+input[type=search] {
+  float:right;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  margin:1rem 0;
+  border:1px solid #444;
+  outline:none;
+  padding:0.5rem;
+}
+
+input[type=search]:focus {
+  border:1px solid #9b59b6;
+}
+
+table {
+  border-bottom:none;
+  width:100%;
+}
+
+tr:hover {
+  background-color:#e5d4ec;
+}
+
+tr:hover td:nth-child(5) {
+  font-weight:bold;
+}
+
+th {
+  text-align:left;
+}
+
+th:nth-child(4) {
+  /*otherwise it gets pushed up - who knows why*/
+  position:absolute;
+}
+
+td, th {
+  padding:0.5rem 1rem;
+}
+
+a {
+  color:#9b59b6;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+a:hover {
+  color:#444;
+}
+
+th:nth-child(5) {
+  background-color:rgb(255, 234, 230);
+}
+
+td:nth-child(5) {
+  text-align:center;
+}
+
+/* =================
+       Tooltips
+   ================= */
+
+.tooltip {
+    position:relative;
+}
+.tooltip span {
+    display:none;
+    font-weight:normal;
+    z-index:1;
+}
+
+.tooltip:hover span {
+    display:inline-block;
+    background-color:#FFF;
+    border:2px solid #1A1A1A;
+    border-radius:0.5rem;
+    color:#444;
+    position:absolute;
+    padding:0.5rem;
+    top:2rem;
+    left:-35px;
+    width:150px;
+}
+
+
+/* =================
+   Responsive Things
+   ================= */
+
+@media only screen and (max-width:850px) {
+  input[type=search] {
+    float:none;
+  }
+
+  h1 {
+    display:block;
+  }
+
+  #main {
+    margin:2rem;
+  }
+}
+
+
+/* =================
+   Responsive Tables
+   ================= */
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr {
+    border: 1px solid #666;
+  }
+
+  tr:not(.last) {
+    border-bottom:none;
+  }
+
+  tr:last-of-type {
+    border: 1px solid #666;
+  }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #DDD;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "TLD"; }
+	td:nth-of-type(2):before { content: "Use"; }
+	td:nth-of-type(3):before { content: "Generic"; }
+	td:nth-of-type(4):before { content: "Price"; }
+	td:nth-of-type(5):before { content: "Popularity"; }
+
+  tr:nth-of-type(2n) {
+    background-color:#e5d4ec;
+  }
+
+  tr:nth-of-type(2n-1):hover {
+    background-color:transparent;
+  }
+
+  tr:nth-of-type(2n) td {
+    border-bottom: 1px solid #EEE;
+  }
+
+  tr td:last-of-type {
+    border-bottom:none;
+  }
+
+  tr:hover td:nth-child(5) {
+    font-weight:normal;
+  }
+
+  td:nth-child(5) {
+    text-align:left;
+  }
+
+  .filtered {
+    diplay:block;
+  }
+}
+
+.filtered {
+  diplay:table-row;
+}
+
+.hidden {
+  display:none;
+}
+
+
+/* ===========
+   Sort Styles
+   =========== */
+
+th.sort-header {
+  cursor:pointer;
+  }
+th.sort-header::-moz-selection,
+th.sort-header::selection {
+  background:transparent;
+  }
+table th.sort-header:after {
+  content:'';
+  float:right;
+  margin-top:7px;
+  border-width:0 4px 4px;
+  border-style:solid;
+  border-color:#404040 transparent;
+  visibility:hidden;
+  }
+table th.sort-header:hover:after {
+  visibility:visible;
+  }
+table th.sort-up:after,
+table th.sort-down:after,
+table th.sort-down:hover:after {
+  visibility:visible;
+  opacity:0.4;
+  }
+table th.sort-up:after {
+  border-bottom:none;
+  border-width:4px 4px 0;
+  }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
